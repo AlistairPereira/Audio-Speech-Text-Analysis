@@ -1,7 +1,3 @@
-#     #https://chatgpt.com/share/673142bd-4a60-800f-b1e0-7df519107a97
-#     #https://chatgpt.com/share/673142bd-4a60-800f-b1e0-7df519107a97
-#https://chatgpt.com/share/6731fb67-42b4-800f-ae06-dfa37b776544 LDA LSA
-#https://chatgpt.com/share/6731fb67-42b4-800f-ae06-dfa37b776544
 
 import nltk
 import gensim.downloader as api
