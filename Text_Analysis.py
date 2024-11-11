@@ -49,6 +49,8 @@ def perform_sentiment_analysis(text):
     
     return sentiment_scores
 
+# Topic Modelling
+
 def perform_topic_modeling(text, num_topics=3):
     # Preprocess the text using spaCy
     doc = nlp(text)
@@ -103,6 +105,7 @@ def perform_topic_modeling(text, num_topics=3):
     
     return topic_words
 
+#Text Summarization
 
 
 def summarize_text(text, num_sentences=3):
