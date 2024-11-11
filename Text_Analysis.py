@@ -1,6 +1,5 @@
 
 import nltk
-import gensim.downloader as api
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation as LDA
@@ -64,7 +63,6 @@ def perform_topic_modeling(text, num_topics=3):
     for topic_idx, topic in enumerate(topics):
         topic_words[topic_idx] = [feature_names[i] for i in topic.argsort()[:-6 - 1:-1]]  # Top 5 words for each topic
 
-    # Output the topic distribution for the document
     print("Topic Distribution in Document:")
     for idx, doc_topic_dist in enumerate(topic_distribution):
         print(f"\nDocument {idx + 1} topic distribution:")
@@ -100,11 +98,9 @@ def summarize_text(text, num_sentences=3):
     return ' '.join(summary)
 
 
-# Main function to read the file, perform sentiment analysis, and topic modeling
 def main():
-    file_path = 'converted_data.txt'  # Replace with your actual file path
+    file_path = 'converted_data.txt'  
 
-    # Read the file content
     transcription_text = read_text_file(file_path)
     
     # Perform Sentiment Analysis
